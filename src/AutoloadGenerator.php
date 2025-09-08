@@ -1,6 +1,6 @@
 <?php
 
-namespace WP_CLI\AutoloadSplitter;
+namespace FP_CLI\AutoloadSplitter;
 
 use Composer\Autoload\ClassMapGenerator;
 use Composer\Config;
@@ -15,9 +15,9 @@ use Composer\Util\Filesystem;
 /**
  * Class AutoloadGenerator.
  *
- * Generates the customized split autoloader files required for WP-CLI.
+ * Generates the customized split autoloader files required for FP-CLI.
  *
- * @package WP_CLI\AutoloadSplitter
+ * @package FP_CLI\AutoloadSplitter
  */
 class AutoloadGenerator extends ComposerAutoloadGenerator
 {

@@ -1,13 +1,13 @@
-WP-CLI Autoload Splitter Composer Plugin
+FP-CLI Autoload Splitter Composer Plugin
 =======================================
 
 ---
 
-> ⛔️ __THIS PACKAGE IS OBSOLETE AS OF WP-CLI v2.0.0__ ⛔️
+> ⛔️ __THIS PACKAGE IS OBSOLETE AS OF FP-CLI v2.0.0__ ⛔️
 
 ---
 
-This is a custom autoloader generator for [WP-CLI](https://wp-cli.org) that generates two separate autoloaders that split up the autoloadable classes. This allows these independent groups of autoloadable classes to be registered at different times in the code execution path.
+This is a custom autoloader generator for [FP-CLI](https://fp-cli.org) that generates two separate autoloaders that split up the autoloadable classes. This allows these independent groups of autoloadable classes to be registered at different times in the code execution path.
 
 Using the default settings, it will produce the following two files:
 
@@ -17,17 +17,17 @@ Using the default settings, it will produce the following two files:
 Usage
 -----
 
-In your project's `composer.json`, require the `wp-cli/autoload-splitter`, and then optionally add the `"extra"` as needed to customize default behavior:
+In your project's `composer.json`, require the `fp-cli/autoload-splitter`, and then optionally add the `"extra"` as needed to customize default behavior:
 
 ```json
 {
     "require": {
-        "wp-cli/autoload-splitter": "^0.1"
+        "fp-cli/autoload-splitter": "^0.1"
     },
     "extra": {
         "autoload-splitter": {
-            "splitter-logic": "WP_CLI\\AutoloadSplitter",
-            "splitter-location": "php/WP_CLI/AutoloadSplitter.php",
+            "splitter-logic": "FP_CLI\\AutoloadSplitter",
+            "splitter-location": "php/FP_CLI/AutoloadSplitter.php",
             "split-target-prefix-true": "autoload_commands",
             "split-target-prefix-false": "autoload_framework"
         }
