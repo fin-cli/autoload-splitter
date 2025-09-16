@@ -1,6 +1,6 @@
 <?php
 
-namespace FP_CLI\AutoloadSplitter;
+namespace FIN_CLI\AutoloadSplitter;
 
 use Composer\Composer;
 use Composer\Config;
@@ -15,7 +15,7 @@ use Composer\Script\ScriptEvents;
  *
  * Composer plugin class that hooks into the Composer plugin events.
  *
- * @package FP_CLI\AutoloadSplitter
+ * @package FIN_CLI\AutoloadSplitter
  */
 final class ComposerPlugin implements PluginInterface, EventSubscriberInterface
 {
@@ -61,14 +61,14 @@ final class ComposerPlugin implements PluginInterface, EventSubscriberInterface
         $optimize = true;
 
         $vendorDir       = $config->get('vendor-dir', Config::RELATIVE_PATHS);
-        $defaultLocation = "{$vendorDir}/fp-cli/fp-cli/php/FP_CLI/AutoloadSplitter.php";
+        $defaultLocation = "{$vendorDir}/fin-cli/fin-cli/php/FIN_CLI/AutoloadSplitter.php";
         $suffix          = $config->get('autoloader-suffix');
 
         self::$extra = $event->getComposer()
             ->getPackage()
             ->getExtra();
 
-        $splitterLogic    = self::getExtraKey(self::LOGIC_CLASS_KEY, 'FP_CLI\AutoloadSplitter');
+        $splitterLogic    = self::getExtraKey(self::LOGIC_CLASS_KEY, 'FIN_CLI\AutoloadSplitter');
         $splitterLocation = self::getExtraKey(self::LOGIC_CLASS_LOCATION_KEY, $defaultLocation);
         $filePrefixTrue   = self::getExtraKey(self::SPLIT_TARGET_PREFIX_TRUE_KEY, 'autoload_commands');
         $filePrefixFalse  = self::getExtraKey(self::SPLIT_TARGET_PREFIX_FALSE_KEY, 'autoload_framework');

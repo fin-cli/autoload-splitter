@@ -1,9 +1,9 @@
 {
-	"name": "fp-cli/autoload-splitter",
+	"name": "fin-cli/autoload-splitter",
 	"description": "Composer plugin for splitting a generated autoloader into two distinct parts.",
 	"type": "composer-plugin",
 	"license": "MIT",
-	"homepage": "https://fp-cli.org",
+	"homepage": "https://fin-cli.org",
 	"authors": [
 		{
 			"name": "Devyn Thompson",
@@ -12,16 +12,16 @@
 		}
 	],
 	"support": {
-		"source": "https://github.com/fp-cli/autoload-splitter",
-		"issues": "https://github.com/fp-cli/autoload-splitter/issues"
+		"source": "https://github.com/fin-cli/autoload-splitter",
+		"issues": "https://github.com/fin-cli/autoload-splitter/issues"
 	},
 	"autoload": {
 		"psr-4": {
-			"FP_CLI\\AutoloadSplitter\\": "src"
+			"FIN_CLI\\AutoloadSplitter\\": "src"
 		}
 	},
 	"extra": {
-		"class": "FP_CLI\\AutoloadSplitter\\ComposerPlugin"
+		"class": "FIN_CLI\\AutoloadSplitter\\ComposerPlugin"
 	},
 	"require": {
 		"composer-plugin-api": "^1.1"

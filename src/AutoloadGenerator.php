@@ -1,6 +1,6 @@
 <?php
 
-namespace FP_CLI\AutoloadSplitter;
+namespace FIN_CLI\AutoloadSplitter;
 
 use Composer\Autoload\ClassMapGenerator;
 use Composer\Config;
@@ -15,9 +15,9 @@ use Composer\Util\Filesystem;
 /**
  * Class AutoloadGenerator.
  *
- * Generates the customized split autoloader files required for FP-CLI.
+ * Generates the customized split autoloader files required for FIN-CLI.
  *
- * @package FP_CLI\AutoloadSplitter
+ * @package FIN_CLI\AutoloadSplitter
  */
 class AutoloadGenerator extends ComposerAutoloadGenerator
 {
